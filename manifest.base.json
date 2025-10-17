@@ -1,0 +1,16 @@
+{
+    "name": "My Extension",
+    "version": "1.0.0",
+    "description": "description",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "19": "icons/icon-19x19.png",
+            "38": "icons/icon-76x76.png"
+        },
+        "default_title": "Title"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
