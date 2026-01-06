@@ -16,6 +16,16 @@ def make_firefox(m):
         bg["scripts"] = [bg.pop("service_worker")]
         bg["persistent"] = False
     m["background"] = bg
+    
+    #new section
+    if "web_accessible_resources" in m:
+        result = []
+        for i in m["web_accessible_resources"]:
+            if "resources" in i:
+                for r in i["resources"]:
+                    result.append(r)
+        m["web_accessible_resources"] = result           
+
     return m
 
 def make_mv3(m):
